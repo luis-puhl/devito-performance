@@ -1,0 +1,6 @@
+[submodule "opescibench"]
+	path = opescibench
+	url = git@github.com:opesci/opescibench.git
+[submodule "devito"]
+	path = devito
+	url = https://github.com/opesci/devito.git
