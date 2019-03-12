@@ -1,4 +1,11 @@
-set -x
+# set -x
+
+for required in mkdir python date numactl uname lscpu icpc uname numactl numastat top; do
+  if ! [ -x "$(command -v $required)" ]; then
+    echo "Error: '$required' is not installed." >&2
+    exit 1
+  fi
+done
 
 if [ ! -e $YASK_HOME ]; then
   exit 1
@@ -86,8 +93,7 @@ cmd=<< EOC
   DEVITO_YASK_DUMP=$dir \
   $numactl \
   python \
-  examples/seismic/benchmark.py \
-  bench \
+  examples/seismic/benchmark.py bench \
   --bench-mode $bench_mode \
   --problem $problem \
   --space-order $space_order \

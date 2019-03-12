@@ -27,7 +27,7 @@ RUN chmod +x \
     /jupyter \
     /tests \
     /docker-entrypoint.sh \
-    /app/run.sh
+    /app/run.sh \
     /app/benchmark-backends.sh
 
 WORKDIR /app
