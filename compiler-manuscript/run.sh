@@ -49,6 +49,21 @@ fi
 nruns=3
 
 cmd="env $plat DEVITO_DEBUG_COMPILER=1 DEVITO_DLE_OPTIONS=blockinner:True DEVITO_AUTOTUNING=aggressive DEVITO_BACKEND=$be DEVITO_OPENMP=1 DEVITO_ARCH=intel DEVITO_LOGGING=DEBUG DEVITO_YASK_AUTOTUNING=preemptive DEVITO_YASK_DUMP=$dir $nc python examples/seismic/benchmark.py bench -bm $bm -P $prob -so $so -to 2 -d $sz2 $sz2 $sz2 --tn 1000 -x $nruns -r $dir"
+
+# cmd="env 
+#   $plat 
+#   DEVITO_DEBUG_COMPILER=1 
+#   DEVITO_DLE_OPTIONS=blockinner:True 
+#   DEVITO_AUTOTUNING=aggressive 
+#   DEVITO_BACKEND=$be 
+#   DEVITO_OPENMP=1
+#   DEVITO_ARCH=intel
+#   DEVITO_LOGGING=DEBUG
+#   DEVITO_YASK_AUTOTUNING=preemptive
+#   DEVITO_YASK_DUMP=$dir
+#   $nc
+#   python examples/seismic/benchmark.py bench -bm $bm -P $prob -so $so -to 2 -d $sz2 $sz2 $sz2 --tn 1000 -x $nruns -r $dir"
+
 echo $cmd >> $log
 $cmd |& tee -a $log
 date >> $log
