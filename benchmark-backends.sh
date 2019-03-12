@@ -1,4 +1,3 @@
-#! /usr/bin/bash
 set -x
 
 if [ ! -e $YASK_HOME ]; then
