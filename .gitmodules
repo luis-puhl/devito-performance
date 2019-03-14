@@ -1,3 +1,0 @@
-[submodule "devito"]
-	path = devito
-	url = https://github.com/opesci/devito.git
