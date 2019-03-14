@@ -46,7 +46,7 @@ if [[ 'install' == $1 ]]; then
     echo "[install] create venv"
     python3 -m venv venv
   fi
-  for item in "-upgrade pip" "r `pwd`/requirements.txt" "r `pwd`/requirements-optional.txt" "r $DEVITO_DIR/requirements.txt"; do
+  for item in "-upgrade pip" "r `pwd`/requirements.txt" "r `pwd`/requirements-optional.txt"; do
     echo "[install] $item"
     $PYTHON_VENV_BIN/pip install -$item >> $OUTPUT_DIR/pip.log
     if [ $? -ne 0 ]; then
