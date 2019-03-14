@@ -1,0 +1,198 @@
+ 22:06:35  puhl@pokebola  ~/project/devito-performance   master ✘ ✖ ✹ ✚ ✭ 
+$ time bash benchmark-backends.sh install     
+[install] create venv
+[install] -upgrade pip
+[install] r /home/puhl/project/devito-performance/requirements.txt
+[install] r /home/puhl/project/devito-performance/requirements-optional.txt
+[install] r /home/puhl/project/devito-performance/devito/requirements.txt
+devito 3.4+648.ga38016ab has requirement pyrevolve==1.0.2, but you'll have pyrevolve 2.0 which is incompatible.
+[install] done
+[python] checking dependencies
+[testing] core
+[testing] acoustic core O2 50 2
+[testing] acoustic core O2 50 2 return 1
+qua mar 13 22:10:45 -03 2019
+Arquitetura:                x86_64
+Modo(s) operacional da CPU: 32-bit, 64-bit
+Ordem dos bytes:            Little Endian
+Tamanhos de endereço:       36 bits physical, 48 bits virtual
+CPU(s):                     8
+Lista de CPU(s) on-line:    0-7
+Thread(s) per núcleo:       2
+Núcleo(s) por soquete:      4
+Soquete(s):                 1
+Nó(s) de NUMA:              1
+ID de fornecedor:           GenuineIntel
+Família da CPU:             6
+Modelo:                     58
+Nome do modelo:             Intel(R) Core(TM) i7-3632QM CPU @ 2.20GHz
+Step:                       9
+CPU MHz:                    2857.577
+CPU MHz máx.:               3200.0000
+CPU MHz mín.:               1200.0000
+BogoMIPS:                   4391.85
+Virtualização:              VT-x
+cache de L1d:               32K
+cache de L1i:               32K
+cache de L2:                256K
+cache de L3:                6144K
+CPU(s) de nó0 NUMA:         0-7
+Opções:                     fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm cpuid_fault epb pti tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms xsaveopt dtherm ida arat pln pts
+
+Error: A license for Comp-CL could not be obtained.  (-1,359,2).
+
+Is your license file in the right location and readable?
+The location of your license file should be specified via
+the $INTEL_LICENSE_FILE environment variable.
+
+License file(s) used were (in this order):
+**  1.  /opt/intel/licenses/*.lic
+**  2.  /opt/intel/compilers_and_libraries_2019.2.187/linux/bin/intel64/../../Licenses
+**  3.  /home/puhl/Licenses
+**  4.  /home/puhl/intel/licenses
+**  5.  /Users/Shared/Library/Application Support/Intel/Licenses
+**  6.  /opt/intel/compilers_and_libraries_2019.2.187/linux/bin/intel64/*.lic
+
+Please refer http://software.intel.com/sites/support/ for more information..
+
+icpc: error #10052: could not checkout FLEXlm license
+Linux pokebola 5.0.0-arch1-1-ARCH #1 SMP PREEMPT Mon Mar 4 14:11:43 UTC 2019 x86_64 GNU/Linux
+available: 1 nodes (0)
+node 0 cpus: 0 1 2 3 4 5 6 7
+node 0 size: 11883 MB
+node 0 free: 7018 MB
+node distances:
+node   0 
+  0:  10 
+
+Per-node system memory usage (in MBs):
+Token Node not in hash table.
+Token Node not in hash table.
+Token Node not in hash table.
+                          Node 0           Total
+                 --------------- ---------------
+MemTotal                11883.07        11883.07
+MemFree                  7018.31         7018.31
+MemUsed                  4864.76         4864.76
+Active                   3633.77         3633.77
+Inactive                  474.47          474.47
+Active(anon)             2601.66         2601.66
+Inactive(anon)             33.63           33.63
+Active(file)             1032.11         1032.11
+Inactive(file)            440.84          440.84
+Unevictable               382.80          382.80
+Mlocked                     2.27            2.27
+Dirty                       0.38            0.38
+Writeback                   0.04            0.04
+FilePages                1760.87         1760.87
+Mapped                    892.41          892.41
+AnonPages                2730.39         2730.39
+Shmem                     440.73          440.73
+KernelStack                12.90           12.90
+PageTables                 47.42           47.42
+NFS_Unstable                0.00            0.00
+Bounce                      0.00            0.00
+WritebackTmp                0.00            0.00
+Slab                      191.14          191.14
+SReclaimable              106.43          106.43
+SUnreclaim                 84.70           84.70
+AnonHugePages               0.00            0.00
+HugePages_Total             0.00            0.00
+HugePages_Free              0.00            0.00
+HugePages_Surp              0.00            0.00
+top - 22:10:45 up  2:16,  2 users,  load average: 1.30, 1.14, 1.01
+Tarefas: 243 total,   1 em exec., 242 dormindo,   0 parado,   0 zumbi
+%CPU(s):  3.1 us,  2.3 sis,  6.2 ni, 86.9 oc,  0.8 ag,  0.0 ih,  0.8 is  0.0 tr
+MB mem :  11883.1 total,   6578.0 livre,   3008.0 usados,   2297.1 buff/cache
+MB swap:      0.0 total,      0.0 livre,      0.0 usados,   8275.5 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU  %MEM    TEMPO+ COMANDO
+ 9533 puhl      39  19  256.3g 456044 304676 S  66.7   3.7   1:22.73 baloo_file
+21869 puhl      20   0 2029540 399776  87640 S  13.3   3.3  11:09.50 electron
+ 9429 puhl      20   0 1517512  88284  56428 S   6.7   0.7   3:48.88 Xorg
+21824 puhl      20   0 1542844 167024  99752 S   6.7   1.4   2:49.55 code-oss
+    1 root      20   0  191544   9492   6380 S   0.0   0.1   0:05.36 systemd
+    2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+    3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+    4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp
+    6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-kblockd
+    8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_percpu_wq
+    9 root      20   0       0      0      0 S   0.0   0.0   0:01.57 ksoftirqd/0
+   10 root      -2   0       0      0      0 I   0.0   0.0   0:03.96 rcu_preempt
+   11 root      -2   0       0      0      0 S   0.0   0.0   0:01.25 rcuc/0
+   12 root      -2   0       0      0      0 S   0.0   0.0   0:00.00 rcub/0
+   13 root      rt   0       0      0      0 S   0.0   0.0   0:00.03 migration/0
+   14 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/0
+   16 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0
+   17 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1
+   18 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/1
+   19 root      rt   0       0      0      0 S   0.0   0.0   0:00.02 migration/1
+   20 root      -2   0       0      0      0 S   0.0   0.0   0:00.40 rcuc/1
+   21 root      20   0       0      0      0 S   0.0   0.0   0:00.27 ksoftirqd/1
+   23 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-kblockd
+
+env DEVITO_OPENMP=1 DEVITO_DLE_OPTIONS=blockinner:True DEVITO_DEBUG_COMPILER=1 DEVITO_AUTOTUNING=aggressive DEVITO_BACKEND=core DEVITO_LOGGING=DEBUG DEVITO_YASK_AUTOTUNING=preemptive DEVITO_YASK_DUMP=/home/puhl/project/devito-performance/devito.bench.2019-03-13/acoustic/core/bmO2/pokebola/grid50/so2 PYTHONPATH=/home/puhl/project/devito-performance/devito numactl --preferred=0 /home/puhl/project/devito-performance/venv/bin/python /home/puhl/project/devito-performance/devito/examples/seismic/benchmark.py bench --bench-mode O2 --problem acoustic --space-order 2 --time-order 2 --shape 50 50 50 --tn 1000 --repeats 3 --resultsdir /home/puhl/project/devito-performance/devito.bench.2019-03-13/acoustic/core/bmO2/pokebola/grid50/so2
+Allocating memory for m(74, 74, 74)
+Allocating memory for damp(72, 72, 72)
+DSE: extract_time_invariants [flops: 7, elapsed: 0.00] >>
+     eliminate_inter_stencil_redundancies [flops: 7, elapsed: 0.00] >>
+     eliminate_intra_stencil_redundancies [flops: 7, elapsed: 0.00] >>
+     factorize [flops: 7, elapsed: 0.00] >>
+     finalize [flops: 7, elapsed: 0.00]
+     [Total elapsed: 0.00 s]
+
+
+OpesciBench: Running 3 repeats - parameters: arch: unknown, autotune: aggressive, dle: advanced, dse: advanced, nbpml: 10, shape: (50, 50, 50), space_order: 2, spacing: (20.0, 20.0, 20.0), time_order: 2, tn: 1000
+OpesciBench [22:10:46]: --- Run 0 ---
+DLE: avoid_denormals [elapsed: 0.00] >>
+     optimize_halospots [elapsed: 0.01] >>
+     loop_blocking [elapsed: 0.00] >>
+     simdize [elapsed: 0.06] >>
+     shm_parallelize [elapsed: 0.01]
+     [Total elapsed: 0.07 s]
+Allocating memory for v0(74, 74, 74)
+Traceback (most recent call last):
+  File "/home/puhl/project/devito-performance/devito/examples/seismic/benchmark.py", line 364, in <module>
+    benchmark()
+  File "/home/puhl/project/devito-performance/venv/lib/python3.7/site-packages/click/core.py", line 764, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/puhl/project/devito-performance/venv/lib/python3.7/site-packages/click/core.py", line 717, in main
+    rv = self.invoke(ctx)
+  File "/home/puhl/project/devito-performance/venv/lib/python3.7/site-packages/click/core.py", line 1137, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/puhl/project/devito-performance/venv/lib/python3.7/site-packages/click/core.py", line 956, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/puhl/project/devito-performance/venv/lib/python3.7/site-packages/click/core.py", line 555, in invoke
+    return callback(*args, **kwargs)
+  File "/home/puhl/project/devito-performance/devito/examples/seismic/benchmark.py", line 164, in cli_bench
+    bench(problem, **kwargs)
+  File "/home/puhl/project/devito-performance/devito/examples/seismic/benchmark.py", line 176, in bench
+    bench.execute(get_ob_exec(run), warmups=0, repeats=repeats)
+  File "/home/puhl/project/devito-performance/venv/lib/python3.7/site-packages/opescibench/benchmark.py", line 119, in execute
+    executor.execute(warmups=warmups, repeats=repeats, **params)
+  File "/home/puhl/project/devito-performance/venv/lib/python3.7/site-packages/opescibench/executor.py", line 60, in execute
+    self.run(**params)
+  File "/home/puhl/project/devito-performance/devito/examples/seismic/benchmark.py", line 342, in run
+    gflopss, oi, timings, _ = self.func(*args, **kwargs)
+  File "/home/puhl/project/devito-performance/devito/examples/seismic/acoustic/acoustic_example.py", line 47, in run
+    smooth(initial_vp, solver.model.m)
+  File "/home/puhl/project/devito-performance/devito/devito/builtins.py", line 53, in smooth
+    dv.Operator(dv.Eq(f, g.avg(dims=axis)), name='smoother')()
+  File "/home/puhl/project/devito-performance/devito/devito/operator.py", line 522, in __call__
+    self.apply(**kwargs)
+  File "/home/puhl/project/devito-performance/devito/devito/operator.py", line 453, in apply
+    args = self.arguments(**kwargs)
+  File "/home/puhl/project/devito-performance/devito/devito/operator.py", line 349, in arguments
+    args = self._prepare_arguments(**kwargs)
+  File "/home/puhl/project/devito-performance/devito/devito/operator.py", line 322, in _prepare_arguments
+    args = self._autotune(args, kwargs.pop('autotune', configuration['autotuning']))
+  File "/home/puhl/project/devito-performance/devito/devito/core/operator.py", line 30, in _autotune
+    args, summary = autotune(self, args, level, mode)
+  File "/home/puhl/project/devito-performance/devito/devito/core/autotuning.py", line 98, in autotune
+    block_shapes = generate_block_shapes(blockable, args, level)
+  File "/home/puhl/project/devito-performance/devito/devito/core/autotuning.py", line 269, in generate_block_shapes
+    handle.append(bs[:-1] + (i[-1],))
+IndexError: tuple index out of range
+qua mar 13 22:10:47 -03 2019
+
+bash benchmark-backends.sh install  157.18s user 15.25s system 70% cpu 4:03.84 total

@@ -1,0 +1,5 @@
+git+https://github.com/opesci/devito.git
+blosc
+numpy
+contexttimer
+git+https://github.com/opesci/opescibench

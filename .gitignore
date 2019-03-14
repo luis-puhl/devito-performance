@@ -1,5 +1,4 @@
 .DS_Store
 *.pdf
-venv/*
-devito.bench*
-*/devito.bench*
+venv*
+*devito.bench*
