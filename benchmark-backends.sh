@@ -1,6 +1,7 @@
 # set -x
 
 OUTPUT_DIR=devito.bench.`date +%Y-%m-%d`
+mkdir -p $OUTPUT_DIR
 
 missing=''
 # icpc: Intel C++ compiler
@@ -186,8 +187,9 @@ if [ $ran_ok -gt 128 ]; then
   break
 fi
 if [ $ran_ok -ne 0 ]; then
-  cat $log
-  exit $ran_ok
+  echo '[testing] ERROR'
+  cat $log | tail
+  # exit $ran_ok
 fi
 
 done
